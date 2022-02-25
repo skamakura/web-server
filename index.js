@@ -27,4 +27,7 @@ app.post("/api/v1/quiz", function (req, res) {
     res.send(answer)
 })
 
-app.listen(3000)
+const PORT = process.env.PORT || 3000;  //herokuサーバーのポート番号またはローカルホストの3000番
+app.listen(PORT, function () {
+    console.log("server is running")
+})
